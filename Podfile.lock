@@ -1,0 +1,47 @@
+PODS:
+  - lottie-ios (2.5.2)
+  - MaterialComponents/Buttons (75.0.1):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (75.0.1):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (75.0.1)
+  - MaterialComponents/private/Math (75.0.1)
+  - MaterialComponents/private/Shapes (75.0.1):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (75.0.1)
+  - MaterialComponents/ShadowLayer (75.0.1):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (75.0.1):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
+
+DEPENDENCIES:
+  - lottie-ios
+  - MaterialComponents/Buttons
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - lottie-ios
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
+
+SPEC CHECKSUMS:
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  MaterialComponents: 9e6875acd311cc88fc0b64d76e2038afc3e71868
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+
+PODFILE CHECKSUM: 144a1df77ff9e248f2895aa84b3478a128542b1b
+
+COCOAPODS: 1.5.3
