@@ -17,24 +17,48 @@
 
 @implementation ViewController
 
+LOTAnimationView *animation;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     MDCButton *button = [[MDCButton alloc] init];
     [button setTitle:@"Start Course Journey" forState:UIControlStateNormal];
-    [button setFrame:CGRectMake(100, 500, 210, 48)];
+    [button setFrame:CGRectMake(100, 450, 210, 48)];
     [button addTarget:self action:@selector(didTapStart:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 
-- (void)didTapStart:(id)sender {
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"funky-chicken.json"];
+- (void)didTapStart:(UIButton *)sender {
+    sender.hidden = YES;
+    
+    animation = [LOTAnimationView animationNamed:@"funky-chicken.json"];
     animation.loopAnimation = true;
-    [animation setFrame:CGRectMake(15, 390, 400, 400)];
+    [animation setFrame:CGRectMake(15, 300, 400, 400)];
     [self.view addSubview:animation];
     [animation playWithCompletion:^(BOOL animationFinished) {
-        // Do Something
+        
     }];
+    
+    MDCButton *walkButton = [[MDCButton alloc] init];
+    [walkButton setTitle:@"Walk" forState:UIControlStateNormal];
+    [walkButton setFrame:CGRectMake(70, 750, 100, 48)];
+    [walkButton addTarget:self action:@selector(didTapWalk:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:walkButton];
+    
+    MDCButton *runButton = [[MDCButton alloc] init];
+    [runButton setTitle:@"Run" forState:UIControlStateNormal];
+    [runButton setFrame:CGRectMake(250, 750, 100, 48)];
+    [runButton addTarget:self action:@selector(didTapRun:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:runButton];
+    
+}
+
+- (void)didTapRun:(id)sender {
+    [animation setAnimationSpeed:3];
+}
+
+- (void)didTapWalk:(id)sender {
+    [animation setAnimationSpeed:1];
 }
 @end
